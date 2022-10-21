@@ -1,17 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import background from "../../../red-onion/images/bannerbackground.png"
 const Banner = () => {
 
     return (
       
       <div
-      style={{ backgroundImage: `url(${background})`, backgroundSize:"cover" }}
-      className="hero min-h-screen text-center"
+     className='lg:text-center'
     >
-      <div className="hero-content flex-col lg:flex-row-reverse">
-        <div className="pl-2" >
-          <h1 className="text-5xl font-bold ">Best Foods Waiting For Your Belly</h1>
+      <div className="flex flex-col lg:flex-row-reverse">
+        <div className='lg:mt-10 ml-5'>
+          <h1 className="text-3xl lg:text-4xl font-bold banner-text">Best Foods Waiting <br /> For Your Belly</h1>
           
           <Link to="/cart" className="btn btn-primary rounded-full ... mt-10">Get Started</Link>
           

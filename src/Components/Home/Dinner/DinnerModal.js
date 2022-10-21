@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../../firebase.init";
 
 const DinnerModal = ({food}) => {
   const [user] = useAuthState(auth)
   const [counter, setCounter] = useState(1);
+  const navigate = useNavigate()
 
   const incrementCount = () => {
     // Update state with incremented value
@@ -43,8 +45,9 @@ const DinnerModal = ({food}) => {
     .then(res => res.json())
     .then(data => {
       if(data.success){
-        toast(`Added to cart`);
-        window.location.reload()
+        toast(`Your cart is added`);
+        // window.location.reload()
+        navigate("/cart")
         
     }
     else{
@@ -55,16 +58,10 @@ const DinnerModal = ({food}) => {
    }
   return (
     <>
-      <input type="checkbox" id="my-modal-3" className="modal-toggle" />
+      <input type="checkbox" id="dinner-modal" className="modal-toggle" />
       <div className="modal">
-        <div className="bg-white">
-          <label
-           onClick={() => setCounter(1)}
-            htmlFor="my-modal-3"
-            className="btn btn-sm btn-circle absolute right-2 top-2"
-          >
-            ✕
-          </label>
+        <div className="bg-white sm:modal-box sm:w-12/12 sm:max-w-5xl">
+        
           <div
       className="hero min-h-screen"
     >
@@ -81,14 +78,22 @@ const DinnerModal = ({food}) => {
                 </h1>
                 <div className="btn-group m-5">
                     <h1 className="text-2xl ">Qunatity: </h1>
+                 <button className="btn btn-primary" onClick={decrementCount}>
+                    -
+                  </button>
+                  <button className="btn btn-primary">{counter}</button>
                   <button className="btn-primary btn" onClick={incrementCount}>
                     +
                   </button>
-                  <button className="btn btn-primary">{counter}</button>
-                  <button className="btn btn-primary" onClick={decrementCount}>
-                    -
-                  </button>
+                  
                 </div><br />
+                <label
+           onClick={() => setCounter(1)}
+            htmlFor="dinner-modal"
+            className="btn btn-neutral rounded-full ... mr-2"
+          >
+            Close
+          </label>
                 <button onClick={handleAddToCart} className="btn btn-primary rounded-full ...">Add To Cart</button>
           
         </div>

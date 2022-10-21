@@ -19,19 +19,19 @@ const History = () => {
     <>
       {history?.length > 0 ? (
         <div>
-          <h1 className="text-center text-2xl font-bold">
+          <h1 className="text-center text-1xl font-bold">
             User name: {user?.displayName}
           </h1>
-          <h1 className="text-center text-2xl font-bold">
+          <h1 className="text-center text-1xl font-bold">
             User Id: {user?.uid}
           </h1>
-          <h1 className="text-center text-2xl font-bold">
+          <h1 className="text-center text-1xl font-bold">
             You have already ordered {history?.length} items
           </h1>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 px-3">
             {history?.map((h) => (
               <div className="card-body items-center text-center">
-                <img src={h?.foodimg} alt="" />
+                <img className="w-52" src={h?.foodimg} alt="food-img" />
                 <h2 className="card-title">{h?.food}</h2>
                 <p className="text-neutral">Customer Name: {h?.customer}</p>
                 <p className="text-neutral">Email: {h?.email}</p>

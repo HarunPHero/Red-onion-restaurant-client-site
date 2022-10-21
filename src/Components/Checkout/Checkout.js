@@ -461,7 +461,7 @@ navigate("/")
     {activeStep === 2 ? (
       <React.Fragment>
         <Typography sx={{ mt: 2, mb: 1 }}>
-          <div className="card mt-10 flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100">
+          <div className="card mt-10 flex-shrink-0 w-80 max-w-md shadow-2xl bg-base-100">
             <div className="card-body">
               <h2 className="card-title m-2">Payment Details</h2>
               <Elements stripe={stripePromise}>

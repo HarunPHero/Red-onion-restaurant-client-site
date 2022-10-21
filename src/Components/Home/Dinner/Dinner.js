@@ -20,7 +20,7 @@ const Dinner = () => {
       {dinner?.map((d) => (
         <div  className="card bg-base-100 hover:shadow-xl">
           <figure className="px-10 pt-10">
-            <img src={d?.img} alt="Shoes" className="rounded-xl" />
+            <img src={d?.img} alt="Shoes" className="rounded-xl w-52" />
           </figure>
           <div className="card-body items-center text-center">
             <h2 className="card-title">{d?.name}</h2>
@@ -28,7 +28,7 @@ const Dinner = () => {
             <p className="text-1xl font-bold">Price : ${d?.price}</p>
             <div className="card-actions">
             {
-              user ? <label onClick={()=>setDinnerModal(d)} htmlFor="my-modal-3" className="btn modal-button btn-primary rounded-full ...">Details</label>: <button disabled className="btn rounded-full ...">Login To see details</button>
+              user ? <label onClick={()=>setDinnerModal(d)} htmlFor="dinner-modal" className="btn modal-button btn-primary rounded-full ...">Details</label>: <button disabled className="btn rounded-full ...">Login To see details</button>
             }
             <DinnerModal food={dinnerModal}></DinnerModal>
             </div>

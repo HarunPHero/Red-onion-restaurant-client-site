@@ -25,7 +25,7 @@ const Breakfast = () => {
             <img
               src={b?.img}
               alt="Shoes"
-              className="rounded-xl"
+              className="rounded-xl w-52"
             />
           </figure>
           <div className="card-body items-center text-center">
