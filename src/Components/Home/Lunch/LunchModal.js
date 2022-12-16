@@ -35,7 +35,7 @@ const LunchModal = ({ food }) => {
       Price: price,
       paid: false,
     };
-    fetch(`https://secret-earth-55769.herokuapp.com/addcart`, {
+    fetch(`https://ror-backend-msaj.onrender.com/addcart`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

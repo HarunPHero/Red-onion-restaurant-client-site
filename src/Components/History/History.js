@@ -9,7 +9,7 @@ const History = () => {
   const [user] = useAuthState(auth);
   const { data: history, isLoading } = useQuery(["history"], () =>
     fetch(
-      `https://secret-earth-55769.herokuapp.com/history?uid=${user?.uid}`
+      `https://ror-backend-msaj.onrender.com/history?uid=${user?.uid}`
     ).then((res) => res.json())
   );
   if (isLoading) {

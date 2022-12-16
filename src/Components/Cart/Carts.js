@@ -15,7 +15,7 @@ const Carts = () => {
     refetch,
   } = useQuery(["cart"], () =>
     fetch(
-      `https://secret-earth-55769.herokuapp.com/addcart?uid=${user?.uid}`
+      `https://ror-backend-msaj.onrender.com/addcart?uid=${user?.uid}`
     ).then((res) => res.json())
   );
   if (isLoading) {
@@ -26,7 +26,7 @@ const Carts = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you want to delete this from cart?");
     if (proceed) {
-      fetch(`https://secret-earth-55769.herokuapp.com/addcart/${id}`, {
+      fetch(`https://ror-backend-msaj.onrender.com/addcart/${id}`, {
         method: "DELETE",
         headers: {
           "content-type": "application/json",

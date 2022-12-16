@@ -7,7 +7,7 @@ const useToken = (user) => {
     const getToken = async () => {
       const uid = user?.user?.uid;
       if (uid) {
-        const { data } = await axios.post("https://secret-earth-55769.herokuapp.com/login", {
+        const { data } = await axios.post("https://ror-backend-msaj.onrender.com/login", {
           uid: uid,
         });
         setToken(data.accessToken);

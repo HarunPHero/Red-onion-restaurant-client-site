@@ -34,7 +34,7 @@ const Checkout = () => {
   const numgt = parseFloat(grandTotal);
 
   useEffect(() => {
-    fetch(`https://secret-earth-55769.herokuapp.com/addcart?uid=${user?.uid}`, {
+    fetch(`https://ror-backend-msaj.onrender.com/addcart?uid=${user?.uid}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -59,7 +59,7 @@ const Checkout = () => {
     handleSubmit,
   } = useForm();
   const onSubmit = (data) => {
-    fetch(`https://secret-earth-55769.herokuapp.com/deliverydetails`, {
+    fetch(`https://ror-backend-msaj.onrender.com/deliverydetails`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -110,7 +110,7 @@ const Checkout = () => {
     const [clientSecret, setClientSecret] = useState("");
     const [transitionId, setTransitionId] = useState("");
     useEffect(() => {
-      fetch("https://secret-earth-55769.herokuapp.com/create-payment-intent", {
+      fetch("https://ror-backend-msaj.onrender.com/create-payment-intent", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -166,7 +166,7 @@ const Checkout = () => {
         setErr("");
         setTransitionId(paymentIntent.id);
         toast.success("Congratulation!! Payment successfull");
-        fetch(`https://secret-earth-55769.herokuapp.com/addcart`, {
+        fetch(`https://ror-backend-msaj.onrender.com/addcart`, {
           method: "PATCH",
           headers: {
             "content-type": "application/json",

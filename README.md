@@ -1,7 +1,7 @@
 # Red Onion Foods
 A single page restaurant app where people are able to select food in their cart and checkout the cart with their information
 
-[Live Website](https://web-red-onion.firebaseapp.com/) | [Backend Server](https://secret-earth-55769.herokuapp.com/)
+[Live Website](https://web-red-onion.firebaseapp.com/) | [Backend Server](https://ror-backend-msaj.onrender.com/)
 
 ### Features
 * Order food from the menu

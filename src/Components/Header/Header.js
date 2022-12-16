@@ -10,7 +10,7 @@ import "./Header.css";
 const Header = () => {
   const [user] = useAuthState(auth);
   const { data, isLoading, refetch } = useQuery(["cart"], () =>
-    fetch(`https://secret-earth-55769.herokuapp.com/addcart?uid=${user?.uid}`).then((res) => res.json())
+    fetch(`https://ror-backend-msaj.onrender.com/addcart?uid=${user?.uid}`).then((res) => res.json())
   );
   const logout = () => {
     signOut(auth);

@@ -11,7 +11,7 @@ const Breakfast = () => {
   const [user, loading] = useAuthState(auth);
   const [breakfastModal, setBreakfastModal] = useState([])
   const { data: breakfast, isLoading } = useQuery(["breakfast"], () =>
-    fetch(`https://secret-earth-55769.herokuapp.com/breakfast/`).then((res) => res.json())
+    fetch(`https://ror-backend-msaj.onrender.com/breakfast/`).then((res) => res.json())
   );
   if (isLoading) {
     return <Loading></Loading>;
