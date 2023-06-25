@@ -5,7 +5,7 @@ const Footer = () => {
         <footer className="footer p-10 bg-black text-white">
         <div>
           <img className='w-1/4' src={require("../../red-onion/images/logo.png")} alt="red-onion-logo" />
-          <p>Red onion restaurant <br/>© Copyrights 2022, All rights reserved</p>
+          <p>Red onion restaurant <br/>© Copyrights 2023, All rights reserved</p>
         </div> 
         <div>
           <span className="footer-title">Services</span> 
